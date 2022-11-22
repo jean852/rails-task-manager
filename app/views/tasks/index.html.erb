@@ -1,0 +1,8 @@
+<h1>Here are all my tasks</h1>
+<hr class="solid">
+<% @tasks.each do |task| %>
+  <p > <%= link_to task.name, task_path(task) %> </p>
+<% end %>
+<hr class="solid">
+<%= link_to "Create a new task", tasks_new_path %>
+<hr class="solid">
